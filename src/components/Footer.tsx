@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="relative bg-[#2D3B36] text-[#FEFFF4] font-inter overflow-hidden px-6 md:px-20 py-24">
+    <footer className="relative bg-[#2D3B36] text-[#E7E8E0] font-inter overflow-hidden px-6 md:px-20 py-24">
       {/* Top Section: Heading + Contact aligned */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center z-10 relative">
         {/* Left: Heading */}
@@ -11,8 +11,8 @@ export default function Footer() {
 
         {/* Right: Contact */}
         <div className="text-left mt-8 md:mt-0 translate-x-[-115px]">
-          <p className="text-sm text-[#FEFFF4]">Get in Touch</p>
-          <p className="text-2xl font-semibold text-white">
+          <p className="text-sm text-[#E7E8E0]">Get in Touch</p>
+          <p className="text-2xl font-semibold text-[#E7E8E0]">
             contact.skincare.com
           </p>
         </div>
@@ -21,7 +21,7 @@ export default function Footer() {
       {/* Bottom Links Section */}
       <div className="max-w-7xl mx-auto my-14 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 z-10 relative">
         {/* Social Links */}
-        <div className="flex gap-10 text-sm text-[#FEFFF4]">
+        <div className="flex gap-10 text-sm text-[#E7E8E0]">
           <a href="#" className="hover:underline">
             Facebook
           </a>
@@ -34,7 +34,7 @@ export default function Footer() {
         </div>
 
         {/* Policy Links */}
-        <div className="flex gap-10 text-sm text-[#FEFFF4] md:justify-end w-full md:w-auto my-10">
+        <div className="flex gap-10 text-sm text-[#E7E8E0] md:justify-end w-full md:w-auto my-10">
           <a href="#" className="hover:underline">
             Terms of Service
           </a>

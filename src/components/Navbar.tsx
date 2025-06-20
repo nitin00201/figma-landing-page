@@ -5,7 +5,7 @@ export default function Navbar() {
     <header className="w-full bg-[#f3f4e8] px-6 md:px-16 py-4 flex items-center justify-between">
       <div className="text-xl font-bold text-[#2D3B36]">SKINCARE</div>
 
-      <nav className="hidden md:flex space-x-8 text-gray-700 text-sm font-medium">
+      <nav className="hidden md:flex space-x-8 text-[#2D3B36] text-sm font-medium">
         <a href="#">All Products</a>
         <a href="#">Serum</a>
         <a href="#">Sunscreen</a>

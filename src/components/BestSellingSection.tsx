@@ -71,10 +71,10 @@ export default function BestSellingSection() {
             {/* Overlay Product Info */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] bg-[#FEFFF4] rounded-md shadow p-4 flex items-center justify-between">
               <div>
-                <h3 className="text-sm font-semibold text-gray-800">
+                <h3 className="text-sm font-semibold text-[#2D3B36]">
                   {product.name}
                 </h3>
-                <p className="text-xs text-gray-500">FROM {product.price}</p>
+                <p className="text-xs text-[#2D3B36]">FROM {product.price}</p>
               </div>
               <button className="p-2 rounded-sm bg-[#2D3B361A] border">
                 <Image
@@ -99,11 +99,11 @@ export default function BestSellingSection() {
           className="object-cover w-full h-64 sm:h-96 lg:h-[500px]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent flex flex-col justify-end p-6 sm:p-10">
-          <h2 className="text-white text-xl sm:text-3xl md:text-4xl font-medium mb-4 text-center">
+          <h2 className="text-[#EFF5E1] text-xl sm:text-3xl md:text-4xl font-medium mb-4 text-center">
             Feel Beautiful Inside and Out <br className="hidden sm:inline" />
             with Every Product.
           </h2>
-          <button className="bg-[#FEFFF4] text-[#2D3B36] rounded-full px-6 py-2 self-center text-sm">
+          <button className="bg-[#EFF5E1] text-[#2D3B36] rounded-full px-6 py-2 self-center text-sm">
             Shop Now
           </button>
         </div>

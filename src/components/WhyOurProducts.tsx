@@ -13,7 +13,7 @@ export default function WhyOurProducts() {
           <h3 className="text-2xl font-semibold text-[#2D3B36] mb-4">
             YOUR SKIN DESERVES <br /> THE BEST CARE.
           </h3>
-          <p className="text-gray-700 mb-8 text-xs max-w-[70%] sm:max-w-[400px]">
+          <p className="text-[#2D3B36] mb-8 text-xs max-w-[70%] sm:max-w-[400px]">
             Discover a curated collection of skincare products designed to rejuvenate, protect, and pamper your skin. Explore our range crafted with love, backed by science, and inspired by nature.
           </p>
 
@@ -56,7 +56,7 @@ export default function WhyOurProducts() {
               height={40}
               className="bg-[#2D3B36] rounded-full p-1 border border-dotted border-white"
             />
-            <span className="text-xs text-gray-700 ">
+            <span className="text-xs text-[#2D3B36] ">
               Best Skin Care Product Award Winning
             </span>
           </div>

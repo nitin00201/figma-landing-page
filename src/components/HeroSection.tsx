@@ -21,7 +21,7 @@ export default function HeroSection() {
                         protect, and enhance your natural glow every day.
                     </p>
 
-                    <button className="mt-6 px-6 py-3 bg-[#2f342f] text-white rounded-full hover:scale-105 transition-transform translate-y-70">
+                    <button className="mt-6 px-6 py-3 bg-[#2f342f] text-[#EFF5E1] rounded-full hover:scale-105 transition-transform translate-y-70">
                         Shop Now
                     </button>
                 </div>
@@ -69,7 +69,7 @@ export default function HeroSection() {
                         height={30}
                         className="rounded-full border border-dotted border-black "
                     />
-                    <p className="text-xs text-gray-700 text-center ">
+                    <p className="text-xs text-[#2D3B36] text-center ">
                         While giving you an invigorating cleansing experience.
                     </p>
                 </div>

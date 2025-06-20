@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Plus, Minus, MessageCircle } from "lucide-react";
 
 const faqItems = [
   {
@@ -72,7 +71,7 @@ export default function FaqSection() {
         {/* Right - FAQ */}
         <div>
           {/* Badge */}
-          <div className="inline-flex items-center bg-[#FEFFF4] border border-gray-300 text-gray-700 px-4 py-2 rounded-full text-sm mb-6">
+          <div className="inline-flex items-center bg-[#FEFFF4] border border-gray-300 text-[#2D3B36] px-4 py-2 rounded-full text-sm mb-6">
             <div className="w-2 h-2 bg-[#2D3B36] rounded-full mr-2"></div>
             Frequently Asked Question
           </div>
@@ -99,13 +98,23 @@ export default function FaqSection() {
                     {item.question}
                   </span>
                   {open === item.id ? (
-                    <Minus className="w-5 h-5 text-gray-600" />
+                    <Image src={`/assets/minus.png`}
+                    alt="minus"
+                    width={20}
+                    height={20}
+                    className="text-[#2D3B36]"
+                    />
                   ) : (
-                    <Plus className="w-5 h-5 text-gray-600" />
+                    <Image src={`/assets/plus.png`}
+                    alt="plus"
+                    width={20}
+                    height={20}
+                    className="text-[#2D3B36]"
+                    />
                   )}
                 </button>
                 <div
-                  className={`px-4 pb-5 transition-all duration-300 text-gray-600 text-sm ${
+                  className={`px-4 pb-5 transition-all duration-300 text-[#2D3B36] text-sm ${
                     open === item.id ? "block" : "hidden"
                   }`}
                 >

@@ -43,8 +43,8 @@ export default function ProductGallery() {
             onClick={() => setActiveFilter(filter)}
             className={`px-4 py-1 rounded-full text-sm font-medium border ${
               activeFilter === filter
-                ? "bg-[#2f342f] text-white"
-                : "bg-[#FEFFF4] text-gray-700"
+                ? "bg-[#2f342f] text-[#FEFFF4]"
+                : "bg-[#FEFFF4] text-[#2D3B36]"
             }`}
           >
             {filter}
@@ -70,10 +70,10 @@ export default function ProductGallery() {
                       {/* Overlay Product Info */}
                       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] bg-[#FEFFF4] rounded-md shadow p-4 flex items-center justify-between">
                         <div>
-                          <h3 className="text-sm font-semibold text-gray-800">
+                          <h3 className="text-sm font-semibold text-[#2D3B36]">
                             {product.name}
                           </h3>
-                          <p className="text-xs text-gray-500">FROM {product.price}</p>
+                          <p className="text-xs text-[#2D3B36]">FROM {product.price}</p>
                         </div>
                         <button className="p-2 rounded-sm bg-[#2D3B361A] border">
                           <Image
