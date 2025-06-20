@@ -39,7 +39,7 @@ const faqItems = [
 export default function FaqSection() {
   const [open, setOpen] = useState(null);
 
-  const toggle = (id) => {
+  const toggle = (id: any) => {
     setOpen(open === id ? null : id);
   };
 
