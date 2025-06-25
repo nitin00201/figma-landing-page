@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const products = [
   {
@@ -21,44 +24,76 @@ const products = [
   },
 ];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
+
 export default function BestSellingSection() {
   return (
-    <section className="bg-[#FEFFF4] py-20 px-4 md:px-20 space-y-16">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="bg-[#FEFFF4] py-20 px-4 md:px-20 space-y-16"
+    >
       {/* Header */}
-      <div className="flex flex-wrap justify-between items-center gap-4">
+      <motion.div
+        variants={fadeUp}
+        custom={0}
+        className="flex flex-wrap justify-between items-center gap-4"
+      >
         <button className="px-4 py-2 border border-gray-800 rounded-full text-[#2D3B36] text-sm flex items-center gap-2">
           <span className="w-2 h-2 bg-[#2D3B36] rounded-full"></span>
           Best Selling Products
         </button>
+
         <h2 className="text-xl md:text-2xl font-medium text-center flex-1 text-[#2D3B36]">
           Skincare That Brings Out <br />
           Your Natural Radiance
         </h2>
+
         <div className="flex items-center gap-3 mx-auto md:mx-0">
           <button className="w-10 h-10 border rounded-full flex items-center justify-center">
-            <Image src={`/assets/left-arrow-1.svg`}
-            alt="l1"
-            width={40}
-            height={40}
-            className=""
+            <Image
+              src={`/assets/left-arrow-1.svg`}
+              alt="l1"
+              width={40}
+              height={40}
             />
           </button>
           <button className="w-10 h-10 border rounded-full flex items-center justify-center">
-             <Image src={`/assets/right-arrow-1.svg`}
-            alt="r1"
-            width={40}
-            height={40}
-            className="ml-4"
+            <Image
+              src={`/assets/right-arrow-1.svg`}
+              alt="r1"
+              width={40}
+              height={40}
+              className="ml-4"
             />
           </button>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Product Cards with overlay info */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {products.map((product) => (
-          <div
+      {/* Product Cards */}
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        {products.map((product, index) => (
+          <motion.div
             key={product.id}
+            variants={fadeUp}
+            custom={index + 1}
             className="relative bg-[#FEFFF4] rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
           >
             <Image
@@ -68,7 +103,7 @@ export default function BestSellingSection() {
               height={400}
               className="object-cover w-full h-[450px] sm:h-[400px] md:h-[450px]"
             />
-            {/* Overlay Product Info */}
+            {/* Overlay */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] bg-[#FEFFF4] rounded-md shadow p-4 flex items-center justify-between">
               <div>
                 <h3 className="text-sm font-semibold text-[#2D3B36]">
@@ -85,12 +120,16 @@ export default function BestSellingSection() {
                 />
               </button>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* Promo Banner */}
-      <div className="relative rounded-2xl overflow-hidden shadow-lg">
+      <motion.div
+        variants={fadeUp}
+        custom={products.length + 1}
+        className="relative rounded-2xl overflow-hidden shadow-lg"
+      >
         <Image
           src="/assets/promo-banner.png"
           alt="Promo Banner"
@@ -107,7 +146,7 @@ export default function BestSellingSection() {
             Shop Now
           </button>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

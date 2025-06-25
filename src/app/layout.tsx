@@ -17,10 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"         className={inter.variable}
+    <html lang="en"         
+    className={inter.variable}
 >
       <body
-      className="font-inter"
+      className="font-inter bg-[#FEFFF4]"
       >
         {children}
       </body>
