@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
+
 
 const products = [
   {
@@ -24,7 +26,8 @@ const products = [
   },
 ];
 
-const fadeUp = {
+
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: (i = 1) => ({
     opacity: 1,
@@ -32,7 +35,7 @@ const fadeUp = {
     transition: {
       delay: i * 0.2,
       duration: 0.6,
-      ease: "easeOut",
+      ease: [0.25, 0.1, 0.25, 1], 
     },
   }),
 };
